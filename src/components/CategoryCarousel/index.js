@@ -58,12 +58,7 @@ export const CategoryCarousel = () => {
 					categories && categories.map(category => (
 						<BoxCarouselCategory key={category.id} >
 							<Img src={category.image} alt={category.name} />
-							<Button to={
-								{ 
-									pathname: '/products',
-									state: { categoryID: category.id }
-								}
-							} >{category.name}</Button>
+							<Button to={'/products'} state={{ categoryID: category.id }} >{category.name}</Button>
 						</BoxCarouselCategory>
 					)) 
 				}

@@ -4,10 +4,12 @@ import { Container, Header, Body, EmptyCart } from './styles.js'
 
 import { useCart } from '../../hooks/CartContext'
 
+import { useState } from 'react'
+
 import FormatCurrency from '../../utils/formatCurrency.js'
 
 export const CartItens = () => {
-	const { products, incremented, decremented, deleteProducts } = useCart()
+	const { products, putProducts, incremented, decremented, deleteProducts } = useCart()
 	
 	return (
 		<Container>

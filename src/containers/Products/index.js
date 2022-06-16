@@ -2,6 +2,8 @@ import { CardProducts } from '../../components/'
 
 import { useState, useEffect } from 'react'
 
+import { useLocation } from 'react-router-dom'
+
 import { Container, Img, Button, Menu, ProductsContainer } from './styles.js'
 
 import BannerProducts from '../../assets/bannerProducts.svg'
@@ -9,7 +11,15 @@ import productOne from '../../assets/product-1.png'
 import productTwo from '../../assets/product-2.png'
 
 export const Products = () => {
-	const [ activeCategory, setActiveCategory ] = useState(0)
+	const { state } = useLocation()
+
+	let id = 0
+
+	if(state?.categoryID) {
+		id = state.categoryID
+	}
+
+	const [ activeCategory, setActiveCategory ] = useState(id)
 	const [ filteredCategory, setFilteredCategory ] = useState()
 	const [ itens ] = useState([
 		{
@@ -18,11 +28,11 @@ export const Products = () => {
 		},
 		{
 			id: 1,
-			category: 'Bebidas'
+			category: 'Entradas'
 		},
 		{
 			id: 2,
-			category: 'Lanches'
+			category: 'Bebidas'
 		},
 		{
 			id: 3,
@@ -30,7 +40,7 @@ export const Products = () => {
 		},
 		{
 			id: 4,
-			category: 'Entradas'
+			category: 'Lanches'
 		},
 		{
 			id: 5,
