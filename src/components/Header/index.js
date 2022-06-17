@@ -1,7 +1,6 @@
 import { Container, ContainerLeft, ContainerRight, PageLink, Text } from './styles.js'
 
 import { AiOutlineShoppingCart } from 'react-icons/ai'
-import { BsFillPersonFill } from 'react-icons/bs'
 
 import { useNavigate, useLocation } from 'react-router-dom'
 
@@ -29,18 +28,12 @@ export const Header = () => {
 
 			<ContainerRight>
 				<PageLink>
-					<BsFillPersonFill alt="person" style={{ color: '#975BAB' }} />
+					<AiOutlineShoppingCart alt="cart" style={{ color: '#975BAB' }} onClick={() => navigate('/cart')} />
 				</PageLink>
 
 				<div className="bar" ></div>
 
-				<PageLink>
-					<AiOutlineShoppingCart alt="cart" style={{ color: '#975BAB' }} onClick={() => navigate('/cart')} />
-				</PageLink>
-
 				<Text>
-					<p>Hello!!!</p>
-
 					<PageLink style={{ color: '#975BAB' }} onClick={() => logoutUser() } >Sair</PageLink>
 				</Text>
 			</ContainerRight>

@@ -25,32 +25,32 @@ export const OffersCarousel = () => {
 		{
 			id: 13,
 			name: 'Batatas',
-			image: Batatas,
+			img: Batatas,
 			price: 99.99
 
 		},
 		{
 			id: 14,
 			name: 'Bebidas',
-			image: Bebidas,
+			img: Bebidas,
 			price: 99.99
 		},
 		{
 			id: 15,
 			name: 'Sobremesas',
-			image: Sobremesas,
+			img: Sobremesas,
 			price: 99.99
 		},
 		{
 			id: 16,
 			name: 'Burgers',
-			image: Burgers,
+			img: Burgers,
 			price: 99.99
 		},
 		{
 			id: 17,
 			name: 'Burgers',
-			image: Sobremesas,
+			img: Sobremesas,
 			price: 99.99		}
 	])
 
@@ -70,7 +70,7 @@ export const OffersCarousel = () => {
   				{ 
 					offers && offers.map(offers => (
 						<BoxCarouselOffers key={offers.id} >
-							<Img src={offers.image} alt={offers.name} />
+							<Img src={offers.img} alt={offers.name} />
 							<p>Nome do produto</p>
 							<p>{ FormatCurrency(offers.price) }</p>
 							<Button onClick={() => {
