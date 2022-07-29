@@ -29,6 +29,10 @@
 - [react-hook-form]()
 - [Styled-components]()
 - [contextAPI]()
+- [prop-types]()
+- [react-icons]()
+- [react-toastify]()
+- [yup]()
 
 <br>
 
